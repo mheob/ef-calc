@@ -1,18 +1,28 @@
+import { useStore } from '../../stores/root.store';
+import { OperatorInput, operatorEntity } from '../../types';
+
 interface Props {
-  children: React.ReactNode;
-  operator: '+' | '-' | 'x' | '/' | '=' | '%' | 'sqrt';
+  operator: OperatorInput;
   className?: string;
   notColored?: boolean;
 }
 
-export function OperatorButton({ children, operator, className, notColored }: Props): JSX.Element {
+export function OperatorButton({ operator, className, notColored }: Props): JSX.Element {
   let classes = 'Calculator__button';
   classes += notColored ? '' : ' Calculator__button--operation';
   classes += className ? ` ${className}` : '';
 
+  const calculate = useStore((state) => state.calculate);
+
+  const handleCalculation = () => {
+    calculate(operator);
+  };
+
   return (
-    <button className={classes} value={operator}>
-      {children}
-    </button>
+    <button
+      className={classes}
+      dangerouslySetInnerHTML={{ __html: operatorEntity[operator] }}
+      onClick={handleCalculation}
+    />
   );
 }
