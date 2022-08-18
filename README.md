@@ -1,3 +1,3 @@
 # EF Calculator
 
-This is just a sample of a simple calculator as training of React
+Just a simple calculator design for easyfeedback.
