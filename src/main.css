@@ -1,0 +1,168 @@
+@font-face {
+  font-family: 'LCDBOLD';
+  src: url('./assets/fonts/LCDBOLD.eot');
+  src: local('LCDBOLD'), url('./assets/fonts/LCDBOLD.woff') format('woff'),
+    url('./assets/fonts/LCDBOLD.ttf') format('truetype');
+}
+
+:root {
+  --brand-color: hsl(345, 75%, 34%);
+  --brand-color-hover: hsl(345, 75%, 29%);
+  --secondary-color: hsl(180, 98%, 26%);
+  --calc-bg-color: hsl(250, 5%, 30%);
+  --calc-button-color-light: hsl(250, 5%, 55%);
+  --calc-button-color-light-hover: hsl(250, 5%, 50%);
+  --calc-button-color-dark: hsl(250, 5%, 42%);
+  --calc-button-color-dark-hover: hsl(250, 5%, 37%);
+  --calc-text-color: hsl(0, 0%, 100%);
+  --border-radius: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+::selection {
+  background-color: var(--secondary-color);
+  color: var(--calc-text-color);
+}
+
+html {
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#root {
+  display: grid;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+
+.App {
+  display: grid;
+  grid-template-rows: max-content auto max-content;
+  place-items: center;
+  max-width: 640px;
+  height: 100vh;
+}
+
+.Header {
+  margin-top: 1.5rem;
+}
+
+.Header__title {
+  display: grid;
+  place-items: center;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+}
+
+.Header__image {
+  max-width: 360px;
+}
+.Header__subtitle {
+  margin-top: 1rem;
+}
+
+.Header__emphasis {
+  color: var(--brand-color);
+}
+
+.Footer {
+  padding: 1rem;
+  opacity: 0.8;
+}
+
+.Calculator {
+  width: 24rem;
+  background-color: var(--calc-bg-color);
+  color: var(--calc-text-color);
+  border: 1px solid var(--calc-bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.3);
+}
+
+.Calculator__header {
+  display: flex;
+  padding: 0.5rem 1.25rem;
+}
+
+.Calculator__header-image {
+  width: 25%;
+  height: auto;
+  opacity: 0.7;
+}
+
+.Calculator__result {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-family: 'LCDBOLD', 'Courier New', Courier, monospace;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  text-align: right;
+}
+
+.Calculator__body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  gap: 2px;
+}
+
+.Calculator__button {
+  width: 100%;
+  height: 5rem;
+  background-color: var(--calc-button-color-light);
+  color: var(--calc-text-color);
+  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 0 5px var(--calc-bg-color);
+}
+
+.Calculator__button:focus,
+.Calculator__button:focus-visible,
+.Calculator__button:focus-within {
+  outline: 3px solid var(--secondary-color);
+  box-shadow: 0 0 0 3px var(--secondary-color);
+}
+
+.Calculator__button:hover {
+  background-color: var(--calc-button-color-light-hover);
+}
+
+.Calculator__button--clear {
+  background-color: var(--calc-button-color-dark);
+}
+
+.Calculator__button--clear:hover {
+  background-color: var(--calc-button-color-dark-hover);
+}
+
+.Calculator__button--operation {
+  background-color: var(--brand-color);
+}
+
+.Calculator__button--operation:hover {
+  background-color: var(--brand-color-hover);
+}
+
+.Calculator__button--double-width {
+  grid-column: 1 / 3;
+}
+
+.Calculator__button--bottom-left {
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.Calculator__button--bottom-right {
+  border-bottom-right-radius: var(--border-radius);
+}
