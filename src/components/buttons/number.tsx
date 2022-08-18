@@ -1,5 +1,8 @@
+import { useStore } from '../../stores/root.store';
+import { NumberInput } from '../../types';
+
 interface Props {
-  number: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | ',';
+  number: NumberInput;
   doubleWidth?: boolean;
   className?: string;
 }
@@ -9,9 +12,15 @@ export function NumberButton({ number, doubleWidth, className }: Props): JSX.Ele
   classes += doubleWidth ? ' Calculator__button--double-width' : '';
   classes += className ? ` ${className}` : '';
 
+  const addNumber = useStore((state) => state.addNumber);
+
+  const handleOnAddNumber = () => {
+    addNumber(number);
+  };
+
   return (
-    <button className={classes} value={number}>
-      {number}
+    <button className={classes} onClick={handleOnAddNumber}>
+      {number === '.' ? ',' : number}
     </button>
   );
 }
