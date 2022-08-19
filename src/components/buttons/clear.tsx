@@ -1,3 +1,5 @@
+import { MouseEventHandler } from 'react';
+
 import { useStore } from '../../stores/root.store';
 
 interface Props {
@@ -10,8 +12,13 @@ export function ClearButton({ className }: Props): JSX.Element {
 
   const resetOutput = useStore((state) => state.resetOutput);
 
+  const handleResetOutput: MouseEventHandler<HTMLButtonElement> = (event) => {
+    event.currentTarget.blur();
+    resetOutput();
+  };
+
   return (
-    <button className={classes} onClick={resetOutput}>
+    <button className={classes} onClick={handleResetOutput}>
       C
     </button>
   );

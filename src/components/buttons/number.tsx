@@ -1,3 +1,5 @@
+import { MouseEventHandler } from 'react';
+
 import { useStore } from '../../stores/root.store';
 import { NumberInput } from '../../types';
 
@@ -14,7 +16,8 @@ export function NumberButton({ number, doubleWidth, className }: Props): JSX.Ele
 
   const addNumber = useStore((state) => state.addNumber);
 
-  const handleOnAddNumber = () => {
+  const handleOnAddNumber: MouseEventHandler<HTMLButtonElement> = (event) => {
+    event.currentTarget.blur();
     addNumber(number);
   };
 
