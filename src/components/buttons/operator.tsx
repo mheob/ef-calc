@@ -1,3 +1,5 @@
+import { MouseEventHandler } from 'react';
+
 import { useStore } from '../../stores/root.store';
 import { OperatorInput, operatorEntity } from '../../types';
 
@@ -14,7 +16,8 @@ export function OperatorButton({ operator, className, notColored }: Props): JSX.
 
   const calculate = useStore((state) => state.calculate);
 
-  const handleCalculation = () => {
+  const handleCalculation: MouseEventHandler<HTMLButtonElement> = (event) => {
+    event.currentTarget.blur();
     calculate(operator);
   };
 

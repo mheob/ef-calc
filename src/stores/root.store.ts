@@ -13,6 +13,7 @@ type State = {
 type Actions = {
   addNumber: (newNumber: NumberInput) => void;
   resetOutput: () => void;
+  removeLastNumber: () => void;
   calculate: (operator: OperatorInput) => void;
 };
 
@@ -32,6 +33,8 @@ export const useStore = create<State & Actions>()((set) => ({
 
   resetOutput: () =>
     set({ output: '0', result: undefined, isEditing: false, lastOperator: undefined }),
+
+  removeLastNumber: () => set((state) => ({ ...state, output: state.output.slice(0, -1) })),
 
   calculate: (operator) =>
     set((state) => {
