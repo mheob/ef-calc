@@ -92,6 +92,7 @@ html {
 
 .Calculator__header {
   display: flex;
+  justify-content: space-between;
   padding: 0.5rem 1.25rem;
 }
 
@@ -99,6 +100,10 @@ html {
   width: 25%;
   height: auto;
   opacity: 0.7;
+}
+
+.Calculator__header-last {
+  font-size: 1rem;
 }
 
 .Calculator__result {

@@ -6,8 +6,9 @@ import { calculateByOperator } from '../utils';
 type State = {
   output: string;
   result?: string;
-  isEditing?: boolean;
   lastOperator?: OperatorInput;
+  calculation: string;
+  isEditing?: boolean;
 };
 
 type Actions = {
@@ -19,6 +20,7 @@ type Actions = {
 
 const initialState: State = {
   output: '0',
+  calculation: '',
 };
 
 export const useStore = create<State & Actions>()((set) => ({
@@ -28,13 +30,31 @@ export const useStore = create<State & Actions>()((set) => ({
     set((state) => {
       if (newNumber === '.' && state.output.includes('.')) return { output: state.output };
       if (!state.isEditing || (state.output === '0' && newNumber !== '.')) state.output = '';
-      return { ...state, output: state.output + newNumber, isEditing: true };
+      if (!state.isEditing && !state.lastOperator) state.calculation = '';
+
+      return {
+        ...state,
+        output: state.output + newNumber,
+        calculation: state.calculation + newNumber,
+        isEditing: true,
+      };
     }),
 
   resetOutput: () =>
-    set({ output: '0', result: undefined, isEditing: false, lastOperator: undefined }),
+    set({
+      output: '0',
+      result: undefined,
+      lastOperator: undefined,
+      calculation: '',
+      isEditing: false,
+    }),
 
-  removeLastNumber: () => set((state) => ({ ...state, output: state.output.slice(0, -1) })),
+  removeLastNumber: () =>
+    set((state) => ({
+      ...state,
+      output: state.output.slice(0, -1),
+      calculation: state.output.slice(0, -1),
+    })),
 
   calculate: (operator) =>
     set((state) => {
@@ -48,7 +68,13 @@ export const useStore = create<State & Actions>()((set) => ({
             })
           : '0';
 
-        return { output: result, result: undefined, isEditing: false, lastOperator: undefined };
+        return {
+          ...state,
+          output: result,
+          result: undefined,
+          lastOperator: undefined,
+          isEditing: false,
+        };
       }
 
       if (operator === '%' || operator === 'sqrt') {
@@ -57,7 +83,7 @@ export const useStore = create<State & Actions>()((set) => ({
           operator: operator,
         });
 
-        return { ...state, output: result, isEditing: false };
+        return { ...state, output: result, calculation: result, isEditing: false };
       }
 
       if (operator === '*' || operator === '/') {
@@ -80,6 +106,12 @@ export const useStore = create<State & Actions>()((set) => ({
         });
       }
 
-      return { output: result, result: result, isEditing: false, lastOperator: operator };
+      return {
+        output: result,
+        result: result,
+        lastOperator: operator,
+        calculation: `${state.calculation} ${operator} `,
+        isEditing: false,
+      };
     }),
 }));
