@@ -1,6 +1,6 @@
 import efLogo from '../assets/easyfeedback-logo.svg';
 
-export function Header(): JSX.Element {
+export function Header() {
   return (
     <header className="Header">
       <h1 className="Header__title">

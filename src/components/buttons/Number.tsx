@@ -9,7 +9,7 @@ interface Props {
   className?: string;
 }
 
-export function NumberButton({ number, doubleWidth, className }: Props): JSX.Element {
+export function NumberButton({ number, doubleWidth, className }: Props) {
   let classes = 'Calculator__button';
   classes += doubleWidth ? ' Calculator__button--double-width' : '';
   classes += className ? ` ${className}` : '';

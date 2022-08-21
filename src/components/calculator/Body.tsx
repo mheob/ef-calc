@@ -1,10 +1,10 @@
 import { useKeyPress } from '../../hooks';
-import { ClearButton } from '../buttons/clear';
-import { MemoryButton } from '../buttons/memory';
-import { NumberButton } from '../buttons/number';
-import { OperatorButton } from '../buttons/operator';
+import { ClearButton } from '../buttons/Clear';
+import { MemoryButton } from '../buttons/Memory';
+import { NumberButton } from '../buttons/Number';
+import { OperatorButton } from '../buttons/Operator';
 
-export function Body(): JSX.Element {
+export function Body() {
   useKeyPress();
 
   return (

@@ -2,14 +2,7 @@ import { MouseEventHandler } from 'react';
 
 import { useStore } from '../../stores/root.store';
 
-interface Props {
-  className?: string;
-}
-
-export function ClearButton({ className }: Props): JSX.Element {
-  let classes = 'Calculator__button Calculator__button--clear';
-  classes += className ? ` ${className}` : '';
-
+export function ClearButton() {
   const resetOutput = useStore((state) => state.resetOutput);
 
   const handleResetOutput: MouseEventHandler<HTMLButtonElement> = (event) => {
@@ -18,7 +11,7 @@ export function ClearButton({ className }: Props): JSX.Element {
   };
 
   return (
-    <button className={classes} onClick={handleResetOutput}>
+    <button className="Calculator__button Calculator__button--clear" onClick={handleResetOutput}>
       C
     </button>
   );

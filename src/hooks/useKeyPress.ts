@@ -10,13 +10,14 @@ import {
   isRemoveInput,
 } from '../utils';
 
+/** Handle keypress events and dispatch the correct actions to the store. */
 export function useKeyPress(): void {
   const addNumber = useStore((state) => state.addNumber);
   const removeLastNumber = useStore((state) => state.removeLastNumber);
   const resetOutput = useStore((state) => state.resetOutput);
   const calculate = useStore((state) => state.calculate);
 
-  const onKeyPress = ({ key }: KeyboardEvent) => {
+  const onKeyPress = ({ key }: KeyboardEvent): void => {
     if (isDeletionInput(key)) {
       resetOutput();
       return;
