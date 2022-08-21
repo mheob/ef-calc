@@ -9,7 +9,7 @@ interface Props {
   notColored?: boolean;
 }
 
-export function OperatorButton({ operator, className, notColored }: Props): JSX.Element {
+export function OperatorButton({ operator, className, notColored }: Props) {
   let classes = 'Calculator__button';
   classes += notColored ? '' : ' Calculator__button--operation';
   classes += className ? ` ${className}` : '';

@@ -3,13 +3,9 @@ interface Props {
   className?: string;
 }
 
-export function MemoryButton({ operator, className }: Props): JSX.Element {
+export function MemoryButton({ operator, className }: Props) {
   let classes = 'Calculator__button';
   classes += className ? ` ${className}` : '';
 
-  return (
-    <button className={classes} value={operator}>
-      {operator}
-    </button>
-  );
+  return <button className={classes}>{operator}</button>;
 }

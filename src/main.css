@@ -41,18 +41,12 @@ html {
 
 #root {
   display: grid;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
-  text-align: center;
-}
-
-.App {
-  display: grid;
   grid-template-rows: max-content auto max-content;
   place-items: center;
-  max-width: 640px;
   height: 100vh;
+  width: 100vw;
+  max-width: 640px;
+  margin: auto;
 }
 
 .Header {
@@ -93,17 +87,26 @@ html {
 .Calculator__header {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  height: 3rem;
   padding: 0.5rem 1.25rem;
 }
 
 .Calculator__header-image {
   width: 25%;
   height: auto;
+  margin-right: 1.5rem;
   opacity: 0.7;
 }
 
-.Calculator__header-last {
-  font-size: 1rem;
+.Calculator__header-calculation {
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none; /* Firefox */
+}
+
+.Calculator__header-calculation::-webkit-scrollbar {
+  display: none;
 }
 
 .Calculator__result {

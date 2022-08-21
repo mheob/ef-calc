@@ -1,4 +1,4 @@
-export function Footer(): JSX.Element {
+export function Footer() {
   return (
     <footer className="Footer">
       <p>Point before dash calculation is not considered!</p>
