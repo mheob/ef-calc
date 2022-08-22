@@ -58,7 +58,7 @@ export const useStore = create<State & Actions>()((set) => ({
 
   calculate: (operator) =>
     set((state) => {
-      let result;
+      let result: string;
       if (operator === '=') {
         result = state.lastOperator
           ? calculateByOperator({
@@ -89,20 +89,20 @@ export const useStore = create<State & Actions>()((set) => ({
       if (operator === '*' || operator === '/') {
         result = calculateByOperator({
           a: state.output,
-          b: state.result || 1,
-          operator: operator,
+          b: state.result ?? 1,
+          operator: state.lastOperator ?? operator,
         });
       } else if (operator === '-') {
         result = calculateByOperator({
-          a: state.result || 0,
+          a: state.result ?? 0,
           b: +state.output * -1,
-          operator: operator,
+          operator: state.lastOperator ?? operator,
         });
       } else {
         result = calculateByOperator({
-          a: state.result || 0,
+          a: state.result ?? 0,
           b: state.output,
-          operator: operator,
+          operator: state.lastOperator ?? operator,
         });
       }
 
