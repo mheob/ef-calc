@@ -1,11 +1,11 @@
-import { OperatorInput } from '../types';
+import type { OperatorInput } from '../types';
 
 type StringOrNumber = string | number;
 
 interface CalculationOptions {
-  a: StringOrNumber;
-  b?: StringOrNumber;
-  operator: OperatorInput;
+	a: StringOrNumber;
+	b?: StringOrNumber;
+	operator: OperatorInput;
 }
 
 /**
@@ -15,24 +15,24 @@ interface CalculationOptions {
  * @returns The result of the calculation
  */
 export function calculateByOperator({ a, b, operator }: CalculationOptions): string {
-  b ??= a;
+	b ??= a;
 
-  switch (operator) {
-    case '+':
-      return String(add(a, b));
-    case '-':
-      return String(subtract(a, b));
-    case '*':
-      return String(multiply(a, b));
-    case '/':
-      return String(divide(a, b));
-    case '%':
-      return String(percentage(a));
-    case 'sqrt':
-      return String(sqrt(a));
-    default:
-      return String(Number.NaN);
-  }
+	switch (operator) {
+		case '+':
+			return String(add(a, b));
+		case '-':
+			return String(subtract(a, b));
+		case '*':
+			return String(multiply(a, b));
+		case '/':
+			return String(divide(a, b));
+		case '%':
+			return String(percentage(a));
+		case 'sqrt':
+			return String(sqrt(a));
+		default:
+			return String(Number.NaN);
+	}
 }
 
 /**
@@ -43,7 +43,7 @@ export function calculateByOperator({ a, b, operator }: CalculationOptions): str
  * @returns The sum of the two numbers
  */
 function add(a: StringOrNumber, b: StringOrNumber): string {
-  return String(+a + +b);
+	return String(+a + +b);
 }
 
 /**
@@ -54,7 +54,7 @@ function add(a: StringOrNumber, b: StringOrNumber): string {
  * @returns The difference of the two numbers
  */
 function subtract(a: StringOrNumber, b: StringOrNumber): string {
-  return String(+a - +b);
+	return String(+a - +b);
 }
 
 /**
@@ -65,7 +65,7 @@ function subtract(a: StringOrNumber, b: StringOrNumber): string {
  * @returns The product of the two numbers
  */
 function multiply(a: StringOrNumber, b: StringOrNumber): string {
-  return String(+a * +b);
+	return String(+a * +b);
 }
 
 /**
@@ -76,7 +76,7 @@ function multiply(a: StringOrNumber, b: StringOrNumber): string {
  * @returns The quotient of the two numbers
  */
 function divide(a: StringOrNumber, b: StringOrNumber): string {
-  return String(+a / +b);
+	return String(+a / +b);
 }
 
 /**
@@ -86,7 +86,7 @@ function divide(a: StringOrNumber, b: StringOrNumber): string {
  * @returns The percentage of the number
  */
 function percentage(a: StringOrNumber): string {
-  return String(+a / 100);
+	return String(+a / 100);
 }
 
 /**
@@ -96,5 +96,5 @@ function percentage(a: StringOrNumber): string {
  * @returns The square root of the number
  */
 function sqrt(a: StringOrNumber): string {
-  return String(Math.sqrt(+a));
+	return String(Math.sqrt(+a));
 }
