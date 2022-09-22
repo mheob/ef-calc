@@ -7,7 +7,7 @@ import { numberInputsKeys, operatorInputsKeys } from '../types';
  * @returns `true` if the key is the `Enter` key, `false` otherwise
  */
 export function isEnterInput(key: string): boolean {
-  return key === 'Enter';
+	return key === 'Enter';
 }
 
 /**
@@ -17,7 +17,7 @@ export function isEnterInput(key: string): boolean {
  * @returns `true` if the key is the `Escape` or `Delete` key, `false` otherwise
  */
 export function isDeletionInput(key: string): boolean {
-  return key === 'Escape' || key === 'Delete';
+	return key === 'Escape' || key === 'Delete';
 }
 
 /**
@@ -27,7 +27,7 @@ export function isDeletionInput(key: string): boolean {
  * @returns `true` if the key is the `Backspace` key, `false` otherwise
  */
 export function isRemoveInput(key: string): boolean {
-  return key === 'Backspace';
+	return key === 'Backspace';
 }
 
 /**
@@ -37,7 +37,7 @@ export function isRemoveInput(key: string): boolean {
  * @returns `true` if the key is an numeric or the comma key, `false` otherwise
  */
 export function isNumericInput(key: string): boolean {
-  return numberInputsKeys.includes(key) || key === ',';
+	return numberInputsKeys.includes(key) || key === ',';
 }
 
 /**
@@ -47,5 +47,5 @@ export function isNumericInput(key: string): boolean {
  * @returns `true` if the key is an operation key, `false` otherwise
  */
 export function isOperatorInput(key: string): boolean {
-  return operatorInputsKeys.includes(key);
+	return operatorInputsKeys.includes(key);
 }
