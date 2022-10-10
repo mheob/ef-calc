@@ -18,20 +18,27 @@ export function calculateByOperator({ a, b, operator }: CalculationOptions): str
 	b ??= a;
 
 	switch (operator) {
-		case '+':
+		case '+': {
 			return String(add(a, b));
-		case '-':
+		}
+		case '-': {
 			return String(subtract(a, b));
-		case '*':
+		}
+		case '*': {
 			return String(multiply(a, b));
-		case '/':
+		}
+		case '/': {
 			return String(divide(a, b));
-		case '%':
+		}
+		case '%': {
 			return String(percentage(a));
-		case 'sqrt':
+		}
+		case 'sqrt': {
 			return String(sqrt(a));
-		default:
+		}
+		default: {
 			return String(Number.NaN);
+		}
 	}
 }
 
