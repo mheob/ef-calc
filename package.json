@@ -18,8 +18,8 @@
 		"zustand": "^4.1.4"
 	},
 	"devDependencies": {
-		"@mheob/eslint-config": "^3.0.0",
-		"@mheob/prettier-config": "^2.0.2",
+		"@mheob/eslint-config": "^3.0.1",
+		"@mheob/prettier-config": "^2.0.3",
 		"@mheob/tsconfig": "^1.0.1",
 		"@types/node": "^18.11.9",
 		"@types/react": "^18.0.25",
