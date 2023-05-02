@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@mheob/eslint-config': ^4.2.1
   '@mheob/prettier-config': ^3.0.1
-  '@mheob/tsconfig': ^1.0.1
+  '@mheob/tsconfig': ^2.0.0
   '@types/node': ^18.16.2
   '@types/react': ^18.2.0
   '@types/react-dom': ^18.2.1
@@ -26,7 +26,7 @@ dependencies:
 devDependencies:
   '@mheob/eslint-config': 4.2.1_oksht3oxai4m62mncdwy6xjtfu
   '@mheob/prettier-config': 3.0.1_prettier@2.8.8
-  '@mheob/tsconfig': 1.0.1
+  '@mheob/tsconfig': 2.0.0
   '@types/node': 18.16.3
   '@types/react': 18.2.0
   '@types/react-dom': 18.2.1
@@ -614,8 +614,8 @@ packages:
       prettier: 2.8.8
     dev: true
 
-  /@mheob/tsconfig/1.0.1:
-    resolution: {integrity: sha512-beCG8a8oXlcHMcFAkxkcthmCgm8nm7cuibK2XpblGxQfnDg9YGVl9w10aoNX6frB0WKC40GZZvGjWLzQPKn7jg==}
+  /@mheob/tsconfig/2.0.0:
+    resolution: {integrity: sha512-jI1uIXavjs7UuanXgzuJaMPCAAK+DeFLlmCmM9+bbeLKkytebXhC7AAsmt/HNlVTKEZi8f1BQkU/9I8sXTrVZg==}
     dev: true
 
   /@next/eslint-plugin-next/13.3.2:

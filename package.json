@@ -20,7 +20,7 @@
 	"devDependencies": {
 		"@mheob/eslint-config": "^4.2.1",
 		"@mheob/prettier-config": "^3.0.1",
-		"@mheob/tsconfig": "^1.0.1",
+		"@mheob/tsconfig": "^2.0.0",
 		"@types/node": "^18.16.2",
 		"@types/react": "^18.2.0",
 		"@types/react-dom": "^18.2.1",
