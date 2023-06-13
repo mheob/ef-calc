@@ -21,13 +21,13 @@
 		"@mheob/eslint-config": "^4.2.1",
 		"@mheob/prettier-config": "^3.0.1",
 		"@mheob/tsconfig": "^2.0.0",
-		"@types/node": "^18.16.6",
-		"@types/react": "^18.2.6",
+		"@types/node": "^18.16.17",
+		"@types/react": "^18.2.9",
 		"@types/react-dom": "^18.2.4",
 		"@vitejs/plugin-react": "^4.0.0",
-		"eslint": "^8.40.0",
+		"eslint": "^8.42.0",
 		"prettier": "^2.8.8",
-		"typescript": "^5.0.4",
-		"vite": "^4.3.5"
+		"typescript": "^5.1.3",
+		"vite": "^4.3.9"
 	}
 }
