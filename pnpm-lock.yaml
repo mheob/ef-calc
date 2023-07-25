@@ -4,7 +4,7 @@ specifiers:
   '@mheob/eslint-config': ^5.1.0
   '@mheob/prettier-config': ^3.1.0
   '@mheob/tsconfig': ^2.0.0
-  '@types/node': ^18.16.19
+  '@types/node': ^18.17.0
   '@types/react': ^18.2.15
   '@types/react-dom': ^18.2.7
   '@vitejs/plugin-react': ^4.0.3
@@ -14,7 +14,7 @@ specifiers:
   react-dom: ^18.2.0
   react-fitty: ^1.0.1
   typescript: ^5.1.6
-  vite: ^4.4.4
+  vite: ^4.4.6
   zustand: ^4.3.9
 
 dependencies:
@@ -27,14 +27,14 @@ devDependencies:
   '@mheob/eslint-config': 5.1.0_7upr4egrsmpioc3afwmlpoyoby
   '@mheob/prettier-config': 3.1.0_prettier@2.8.8
   '@mheob/tsconfig': 2.0.0
-  '@types/node': 18.16.19
+  '@types/node': 18.17.0
   '@types/react': 18.2.15
   '@types/react-dom': 18.2.7
-  '@vitejs/plugin-react': 4.0.3_vite@4.4.4
+  '@vitejs/plugin-react': 4.0.3_vite@4.4.7
   eslint: 8.45.0
   prettier: 2.8.8
   typescript: 5.1.6
-  vite: 4.4.4_@types+node@18.16.19
+  vite: 4.4.7_@types+node@18.17.0
 
 packages:
 
@@ -669,8 +669,8 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: true
 
-  /@types/node/18.16.19:
-    resolution: {integrity: sha512-IXl7o+R9iti9eBW4Wg2hx1xQDig183jj7YLn8F7udNceyfkbn1ZxmzZXuak20gR40D7pIkIY1kYGx5VIGbaHKA==}
+  /@types/node/18.17.0:
+    resolution: {integrity: sha512-GXZxEtOxYGFchyUzxvKI14iff9KZ2DI+A6a37o6EQevtg6uO9t+aUZKcaC1Te5Ng1OnLM7K9NVVj+FbecD9cJg==}
     dev: true
 
   /@types/normalize-package-data/2.4.1:
@@ -833,7 +833,7 @@ packages:
       eslint-visitor-keys: 3.4.1
     dev: true
 
-  /@vitejs/plugin-react/4.0.3_vite@4.4.4:
+  /@vitejs/plugin-react/4.0.3_vite@4.4.7:
     resolution: {integrity: sha512-pwXDog5nwwvSIzwrvYYmA2Ljcd/ZNlcsSG2Q9CNDBwnsd55UGAyr2doXtB5j+2uymRCnCfExlznzzSFbBRcoCg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
@@ -843,7 +843,7 @@ packages:
       '@babel/plugin-transform-react-jsx-self': 7.22.5_@babel+core@7.22.5
       '@babel/plugin-transform-react-jsx-source': 7.22.5_@babel+core@7.22.5
       react-refresh: 0.14.0
-      vite: 4.4.4_@types+node@18.16.19
+      vite: 4.4.7_@types+node@18.17.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -2960,8 +2960,8 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite/4.4.4_@types+node@18.16.19:
-    resolution: {integrity: sha512-4mvsTxjkveWrKDJI70QmelfVqTm+ihFAb6+xf4sjEU2TmUCTlVX87tmg/QooPEMQb/lM9qGHT99ebqPziEd3wg==}
+  /vite/4.4.7_@types+node@18.17.0:
+    resolution: {integrity: sha512-6pYf9QJ1mHylfVh39HpuSfMPojPSKVxZvnclX1K1FyZ1PXDOcLBibdq5t1qxJSnL63ca8Wf4zts6mD8u8oc9Fw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -2988,7 +2988,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 18.16.19
+      '@types/node': 18.17.0
       esbuild: 0.18.13
       postcss: 8.4.26
       rollup: 3.26.3
