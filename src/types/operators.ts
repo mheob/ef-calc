@@ -1,6 +1,6 @@
 export const operatorInputsKeys = ['+', '-', '*', '/', '=', '%', 'sqrt'];
 export const operatorInputs = ['+', '-', '*', '/', '=', '%', 'sqrt'] as const;
-export type OperatorInput = typeof operatorInputs[number];
+export type OperatorInput = (typeof operatorInputs)[number];
 
 export const operatorEntity: Record<OperatorInput, string> = {
 	'+': '&#43;',
