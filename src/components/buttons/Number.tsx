@@ -1,7 +1,7 @@
-import { MouseEventHandler } from 'react';
+import type { MouseEventHandler } from 'react';
 
 import { useStore } from '../../stores/root.store';
-import { NumberInput } from '../../types';
+import type { NumberInput } from '../../types';
 
 interface Props {
 	number: NumberInput;

@@ -1,7 +1,8 @@
-import { MouseEventHandler } from 'react';
+import type { MouseEventHandler } from 'react';
 
 import { useStore } from '../../stores/root.store';
-import { OperatorInput, operatorEntity } from '../../types';
+import type { OperatorInput } from '../../types';
+import { operatorEntity } from '../../types';
 
 interface Props {
 	operator: OperatorInput;
