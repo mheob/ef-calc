@@ -12,22 +12,22 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"@vercel/analytics": "^1.1.1",
+		"@vercel/analytics": "^1.1.2",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-fitty": "^1.0.1",
-		"zustand": "^4.4.7"
+		"zustand": "^4.5.0"
 	},
 	"devDependencies": {
 		"@mheob/eslint-config": "^5.2.0",
 		"@mheob/prettier-config": "^3.2.0",
 		"@mheob/tsconfig": "^2.0.0",
-		"@types/node": "^20.10.5",
-		"@types/react": "^18.2.45",
+		"@types/node": "^20.11.16",
+		"@types/react": "^18.2.51",
 		"@types/react-dom": "^18.2.18",
 		"@vitejs/plugin-react": "^4.2.1",
 		"eslint": "^8.56.0",
-		"prettier": "^3.1.1",
+		"prettier": "^3.2.4",
 		"typescript": "^5.3.3",
 		"vite": "^5.0.12"
 	}
