@@ -12,7 +12,7 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"@vercel/analytics": "^1.4.0",
+		"@vercel/analytics": "^1.4.1",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
 		"react-fitty": "^1.0.1",
@@ -22,13 +22,13 @@
 		"@mheob/eslint-config": "^5.2.0",
 		"@mheob/prettier-config": "^3.3.2",
 		"@mheob/tsconfig": "^2.2.1",
-		"@types/node": "^20.17.6",
+		"@types/node": "^20.17.9",
 		"@types/react": "^18.3.12",
 		"@types/react-dom": "^18.3.1",
-		"@vitejs/plugin-react": "^4.3.3",
+		"@vitejs/plugin-react": "^4.3.4",
 		"eslint": "^8.57.1",
-		"prettier": "^3.3.3",
-		"typescript": "^5.6.3",
+		"prettier": "^3.4.1",
+		"typescript": "^5.7.2",
 		"vite": "^5.4.11"
 	}
 }
