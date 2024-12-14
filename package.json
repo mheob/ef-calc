@@ -22,7 +22,7 @@
 		"@mheob/eslint-config": "^5.2.0",
 		"@mheob/prettier-config": "^3.3.2",
 		"@mheob/tsconfig": "^2.2.1",
-		"@types/node": "^20.17.6",
+		"@types/node": "^22.10.2",
 		"@types/react": "^18.3.12",
 		"@types/react-dom": "^18.3.1",
 		"@vitejs/plugin-react": "^4.3.3",
