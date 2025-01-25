@@ -19,7 +19,7 @@
 		"zustand": "^5.0.3"
 	},
 	"devDependencies": {
-		"@mheob/eslint-config": "^5.2.0",
+		"@mheob/eslint-config": "^7.2.0",
 		"@mheob/prettier-config": "^3.3.3",
 		"@mheob/tsconfig": "^2.2.1",
 		"@types/node": "^20.17.14",
