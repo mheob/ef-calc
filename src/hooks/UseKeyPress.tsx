@@ -18,33 +18,33 @@ export function UseKeyPress(): void {
 	const calculate = useStore(state => state.calculate);
 
 	const onKeyPress = useCallback(
-		() =>
-			({ key }: KeyboardEvent): void => {
-				if (isDeletionInput(key)) {
-					resetOutput();
-					return;
-				}
+		({ key }: KeyboardEvent): void => {
+			if (isDeletionInput(key)) {
+				resetOutput();
+				return;
+			}
 
-				if (isNumericInput(key)) {
-					addNumber(key === ',' ? '.' : (key as NumberInput));
-					return;
-				}
+			if (isNumericInput(key)) {
+				addNumber(key === ',' ? '.' : (key as NumberInput));
+				return;
+			}
 
-				if (isRemoveInput(key)) {
-					removeLastNumber();
-					return;
-				}
+			if (isRemoveInput(key)) {
+				removeLastNumber();
+				return;
+			}
 
-				if (isOperatorInput(key)) {
-					calculate(key as OperatorInput);
-					return;
-				}
+			if (isOperatorInput(key)) {
+				calculate(key as OperatorInput);
+				return;
+			}
 
-				if (isEnterInput(key)) {
-					calculate('=');
-				}
-			},
+			if (isEnterInput(key)) {
+				calculate('=');
+			}
+		},
 		[addNumber, calculate, removeLastNumber, resetOutput],
+	);
 	);
 
 	useEffect(() => {
