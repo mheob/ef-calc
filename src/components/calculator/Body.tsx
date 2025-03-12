@@ -34,9 +34,9 @@ export function Body() {
 			<NumberButton number="3" />
 			<OperatorButton operator="+" />
 
-			<NumberButton number="0" doubleWidth className="Calculator__button--bottom-left" />
+			<NumberButton className="Calculator__button--bottom-left" number="0" doubleWidth />
 			<NumberButton number="." />
-			<OperatorButton operator="=" className="Calculator__button--bottom-right" />
+			<OperatorButton className="Calculator__button--bottom-right" operator="=" />
 		</section>
 	);
 }

@@ -1,6 +1,6 @@
 import type { OperatorInput } from '../types';
 
-type StringOrNumber = string | number;
+type StringOrNumber = number | string;
 
 interface CalculationOptions {
 	a: StringOrNumber;
@@ -12,6 +12,9 @@ interface CalculationOptions {
  * Calculates the result of the given one or two numbers and an operator
  *
  * @param CalculationOptions The options for the calculation
+ * @param CalculationOptions.a The first number
+ * @param CalculationOptions.b The second number
+ * @param CalculationOptions.operator The operator
  * @returns The result of the calculation
  */
 export function calculateByOperator({ a, b, operator }: CalculationOptions): string {

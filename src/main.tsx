@@ -1,4 +1,3 @@
-/* eslint-disable unicorn/filename-case, import/default */
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 

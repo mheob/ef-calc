@@ -3,7 +3,7 @@ import { ReactFitty } from 'react-fitty';
 import { useStore } from '../../stores/root.store';
 
 export function Result() {
-	const output = useStore((state) => state.output);
+	const output = useStore(state => state.output);
 
 	const localizedOutput = (+output).toLocaleString('DE', { maximumFractionDigits: 15 });
 
