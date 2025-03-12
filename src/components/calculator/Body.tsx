@@ -1,11 +1,11 @@
-import { useKeyPress } from '../../hooks';
+import { UseKeyPress } from '../../hooks';
 import { ClearButton } from '../buttons/Clear';
 import { MemoryButton } from '../buttons/Memory';
 import { NumberButton } from '../buttons/Number';
 import { OperatorButton } from '../buttons/Operator';
 
 export function Body() {
-	useKeyPress();
+	UseKeyPress();
 
 	return (
 		<section className="Calculator__body">
