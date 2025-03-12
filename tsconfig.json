@@ -1,5 +1,5 @@
 {
 	"extends": "@mheob/tsconfig/react",
-	"include": ["src"],
-	"references": [{ "path": "./tsconfig.node.json" }]
+	"references": [{ "path": "./tsconfig.node.json" }],
+	"include": ["src"]
 }

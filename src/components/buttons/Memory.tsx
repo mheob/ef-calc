@@ -1,11 +1,15 @@
 interface Props {
-	operator: 'MR' | 'MC' | 'M+' | 'M-';
 	className?: string;
+	operator: 'M+' | 'M-' | 'MC' | 'MR';
 }
 
-export function MemoryButton({ operator, className }: Props) {
+export function MemoryButton({ className, operator }: Readonly<Props>) {
 	let classes = 'Calculator__button';
 	classes += className ? ` ${className}` : '';
 
-	return <button className={classes}>{operator}</button>;
+	return (
+		<button className={classes} type="button">
+			{operator}
+		</button>
+	);
 }

@@ -4,8 +4,8 @@ daysUntilStale: 80
 daysUntilClose: 10
 # Issues with these labels will never be considered stale
 exemptLabels:
-  - "not stale"
-  - "prio high"
+  - not stale
+  - prio high
 # Label to use when marking an issue as stale
 staleLabel: stale
 # Comment to post when marking an issue as stale. Set to `false` to disable

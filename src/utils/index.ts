@@ -1,2 +1,2 @@
 export * from './calculations';
-export * from './validateKeyPress';
+export * from './validate-key-press';
