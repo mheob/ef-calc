@@ -1,7 +1,6 @@
-// eslint.config.js
-import mheob from '@mheob/eslint-config';
+import defaultConfig from '@mheob/eslint-config';
 
-export default mheob({
+export default defaultConfig({
 	react: true,
 	toml: false,
 });
